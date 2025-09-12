@@ -2,7 +2,7 @@ from celery import Celery
 
 from main import main
 
-app = Celery("tasks", backend="redis://localhost", broker="redis://localhost")
+app = Celery("tasks", backend="redis://redis:6379", broker="redis://redis:6379")
 
 
 @app.task
