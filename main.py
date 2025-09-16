@@ -28,11 +28,11 @@ def get_response() -> list | None:
 
 def convert_to_csv(data: list) -> None:
     try:
-        with open("result_data.csv", "w", newline="") as csvfile:
+        with open("users.csv", "w", newline="") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=HEADERS)
             writer.writeheader()
             writer.writerows(data)
-        print("Users data just written to 'result_data.csv'")
+        print("Users data just written to 'users.csv'")
     except IOError as e:
         print(f"An unexpected error while writing data to file: {e} ")
         raise
